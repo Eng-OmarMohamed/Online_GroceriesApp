@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'AppColor.dart';
+import '../core/AppColor.dart';
 
 class BarBottom extends StatefulWidget {
   const BarBottom({super.key});

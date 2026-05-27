@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:online_groceries_app/signup.dart';
-import 'AppColor.dart';
+import 'package:online_groceries_app/Screens/signup.dart';
+import '../core/AppColor.dart';
 import 'HomePage.dart';
 
 class LoginPage extends StatefulWidget {

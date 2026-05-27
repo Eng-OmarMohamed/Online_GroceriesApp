@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'BarBottom.dart';
+import '../BottomBar/BarBottom.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -14,7 +14,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: BarBottom(),
       backgroundColor: Colors.white,
-      body : 
     );
   }
 }

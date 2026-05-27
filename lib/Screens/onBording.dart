@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_groceries_app/AppColor.dart';
+import 'package:online_groceries_app/core/AppColor.dart';
 
 import 'Login.dart';
 

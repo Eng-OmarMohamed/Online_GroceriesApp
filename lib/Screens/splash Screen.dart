@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'AppColor.dart';
+import '../core/AppColor.dart';
 import 'onBording.dart';
 
 class Splash_screen extends StatelessWidget {
