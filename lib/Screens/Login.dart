@@ -82,13 +82,13 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: AppColor.Inbut_TextFormField,
                   fontSize: 17,
                 ),
                 decoration: InputDecoration(
                   suffixIcon: Icon(
                     Icons.email_outlined,
-                    color: Colors.teal,
+                    color: AppColor.Email,
                     size: 20,
                   ),
                   contentPadding: EdgeInsets.only(top: 10, left: 15),
@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: !isVisible,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                      color: AppColor.Inbut_TextFormField,
                     fontSize: 17,
                   ),
                   decoration: InputDecoration(
@@ -123,11 +123,11 @@ class _LoginPageState extends State<LoginPage> {
                       }, icon:
                     isVisible ? Icon(
                       Icons.visibility ,
-                      color: Colors.red ,
+                      color: AppColor.Eye_Password ,
                       size: 20,)
                         : Icon(
                       Icons.visibility_off ,
-                      color: Colors.red ,
+                      color: AppColor.Eye_Password ,
                       size: 20,),
                     ),
                     contentPadding: EdgeInsets.only(top: 10, left: 15),
@@ -142,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text("Forget Password?" , style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+                  color: AppColor.DownText_Loging,
                 ),),),
               SizedBox(height: 35),
               ElevatedButton(
@@ -171,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text("Don’t have an account?" ,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Colors.black87,
+                        color: AppColor.DownText_Loging,
                         fontWeight: FontWeight.bold
                     ),
                   ),
@@ -182,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   }, child: Text("Sign Up" ,
                     style: TextStyle(
-                        color: Colors.greenAccent,
+                        color: AppColor.DownSignUpText_Loging,
                         fontWeight: FontWeight.bold,
                         fontSize: 15
                     ),))

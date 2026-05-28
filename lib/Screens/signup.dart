@@ -84,13 +84,13 @@ class _SignUp_PageState extends State<SignUp_Page> {
                 },
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: AppColor.Inbut_TextFormField,
                   fontSize: 17,
                 ),
                 decoration: InputDecoration(
                   suffixIcon: Icon(
                     Icons.person,
-                    color: Colors.indigo,
+                    color: AppColor.UserName,
                     size: 20,
                   ),
                   contentPadding: EdgeInsets.only(top: 10, left: 15),
@@ -143,7 +143,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                 },
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: AppColor.Inbut_TextFormField,
                   fontSize: 17,
                 ),
                 decoration: InputDecoration(
@@ -159,11 +159,11 @@ class _SignUp_PageState extends State<SignUp_Page> {
                     }, icon:
                   isVisible ? Icon(
                     Icons.visibility ,
-                    color: Colors.red ,
+                    color: AppColor.Eye_Password ,
                     size: 20,)
                       : Icon(
                     Icons.visibility_off ,
-                    color: Colors.red ,
+                    color: AppColor.Eye_Password ,
                     size: 20,),
                   ),
                   contentPadding: EdgeInsets.only(top: 10, left: 15),
@@ -173,22 +173,22 @@ class _SignUp_PageState extends State<SignUp_Page> {
                 children: [
                   Text("By continuing you agree to our ",
                     style: TextStyle(
-                      color: Colors.black54,
+                      color: AppColor.DownText_SignUp,
                       fontWeight: FontWeight.bold,
                     ),),
                   Text("Terms of Service ",
                     style: TextStyle(
-                      color: Colors.greenAccent,
+                      color: AppColor.DownText_signUp,
                       fontWeight: FontWeight.bold,
                     ),),
                   Text("and ",
                     style: TextStyle(
-                      color: Colors.black54,
+                      color: AppColor.DownText_SignUp,
                       fontWeight: FontWeight.bold,
                     ),),
                   Text("Privacy Policy.",
                     style: TextStyle(
-                      color: Colors.greenAccent,
+                      color: AppColor.DownText_signUp,
                       fontWeight: FontWeight.bold,
                     ),),
                 ],
@@ -221,7 +221,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   Text("Already have an account?" ,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Colors.black87,
+                        color:AppColor.DownText_2SignUp,
                         fontWeight: FontWeight.bold
                     ),
                   ),
@@ -232,7 +232,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                     );
                   }, child: Text("Sign Up" ,
                     style: TextStyle(
-                        color: Colors.greenAccent,
+                        color: AppColor.DownText_signUp,
                         fontWeight: FontWeight.bold,
                         fontSize: 15
                     ),))

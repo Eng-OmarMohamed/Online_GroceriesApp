@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/core/AppColor.dart';
 import '../BottomBar/Linking/LinkingBottomBar.dart';
 class HomePage extends StatefulWidget {
   final String username;
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: MainScreen(username: widget.username,email: widget.email),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColor.bg_HomePage,
     );
   }
 }
