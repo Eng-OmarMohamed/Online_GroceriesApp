@@ -61,6 +61,18 @@ The design is inspired by the famous *Nectar Grocery App* with some custom impro
 
 ---
 
+## Screenshots
+
+![Home Screen]("assets/images/Screen1)
+
+![Login Screen]("assets/images/Screen2)
+
+![Home Screen]("assets/images/Screen3)
+
+![Login Screen]("assets/images/Screen4)
+
+![Login Screen]("assets/images/Screen5)
+
 # 👨‍💻 Developer
 
 *EngOmar*
