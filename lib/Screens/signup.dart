@@ -12,6 +12,18 @@ class SignUp_Page extends StatefulWidget {
 
 class _SignUp_PageState extends State<SignUp_Page> {
   bool isVisible = false;
+  final formKey = GlobalKey<FormState>();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +43,9 @@ class _SignUp_PageState extends State<SignUp_Page> {
               stops: [0.0, 0.3, 0.6, 1.0],
             ),
           ),
-          child: Column(
+          child: Form(
+              key: formKey,
+              child: Column(
             children: [
               Transform.translate(offset: Offset(0, 40),
                 child: Image.asset(
@@ -39,7 +53,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   width : 170,
                   height: 170,
                 ),),
-              SizedBox(height: 50,),
+              SizedBox(height: 30,),
               Transform.translate(offset: Offset(-135, 0) ,
                 child: Text("Sign Up" , style: TextStyle(
                   fontSize: 27,
@@ -62,6 +76,12 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   ),),),
               SizedBox(height: 35),
               TextFormField(
+                controller: usernameController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) return 'Please Enter Your Name';
+                  if (value.length < 3) return 'Name Very Short';
+                  return null;
+                },
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -85,6 +105,12 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   ),),),
               SizedBox(height: 35),
               TextFormField(
+                controller: emailController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) return 'Please Enter Your Email';
+                  if (!value.contains('@gmail.com')) return 'Please Add "@gmail.com" To True';
+                  return null;
+                },
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -108,40 +134,40 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   ),),),
               SizedBox(height: 35),
               TextFormField(
-                  obscureText: !isVisible,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                    fontSize: 17,
+                obscureText: !isVisible,
+                controller: passwordController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) return 'Please Enter Your Password';
+                  if (value.length < 6) return 'Password It must be higher than 6 digits';
+                  return null;
+                },
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 17,
+                ),
+                decoration: InputDecoration(
+                  suffixIcon: IconButton(
+                    onPressed: (){
+                      setState(() {
+                        if (isVisible == true) {
+                          isVisible = false;
+                        } else {
+                          isVisible = true;
+                        }
+                      });
+                    }, icon:
+                  isVisible ? Icon(
+                    Icons.visibility ,
+                    color: Colors.red ,
+                    size: 20,)
+                      : Icon(
+                    Icons.visibility_off ,
+                    color: Colors.red ,
+                    size: 20,),
                   ),
-                  decoration: InputDecoration(
-                    suffixIcon: IconButton(
-                      onPressed: (){
-                        setState(() {
-                          if (isVisible == true) {
-                            isVisible = false;
-                          } else {
-                            isVisible = true;
-                          }
-                        });
-                      }, icon:
-                    isVisible ? Icon(
-                      Icons.visibility ,
-                      color: Colors.red ,
-                      size: 20,)
-                        : Icon(
-                      Icons.visibility_off ,
-                      color: Colors.red ,
-                      size: 20,),
-                    ),
-                    contentPadding: EdgeInsets.only(top: 10, left: 15),
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Please Enter Your Email !";
-                    }
-                    return null;
-                  }
+                  contentPadding: EdgeInsets.only(top: 10, left: 15),
+                ),
               ),
               Wrap(
                 children: [
@@ -151,10 +177,10 @@ class _SignUp_PageState extends State<SignUp_Page> {
                       fontWeight: FontWeight.bold,
                     ),),
                   Text("Terms of Service ",
-                  style: TextStyle(
-                    color: Colors.greenAccent,
-                    fontWeight: FontWeight.bold,
-                  ),),
+                    style: TextStyle(
+                      color: Colors.greenAccent,
+                      fontWeight: FontWeight.bold,
+                    ),),
                   Text("and ",
                     style: TextStyle(
                       color: Colors.black54,
@@ -172,18 +198,21 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   style: ElevatedButton.styleFrom(
                       minimumSize: Size(353, 67),
                       backgroundColor: AppColor.button_OnBording_Page)
-                  ,onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              }, child: Text("Sign Up" ,
-                style: TextStyle(
-                  fontSize: 18.6,
-                  fontWeight: FontWeight.bold,
-                  color: AppColor.TextButton_OnBording,
-                ),
-              )
+                  , onPressed: () {
+                if (formKey.currentState!.validate()) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage(username: usernameController.text, email: emailController.text,)),
+                  );
+                }
+              },
+                  child: Text("Sign Up" ,
+                    style: TextStyle(
+                      fontSize: 18.6,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.TextButton_OnBording,
+                    ),
+                  )
               ),
               SizedBox(height: 10),
               Row(
@@ -210,7 +239,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                 ],
               )
             ],
-          )
+          ))
       ),
     );
   }

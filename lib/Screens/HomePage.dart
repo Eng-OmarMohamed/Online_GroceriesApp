@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
-import '../BottomBar/BarBottom.dart';
+import '../BottomBar/Linking/LinkingBottomBar.dart';
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String username;
+  final String email;
+  const HomePage({super.key, required this.username, required this.email});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -12,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BarBottom(),
+      bottomNavigationBar: MainScreen(username: widget.username,email: widget.email),
       backgroundColor: Colors.white,
     );
   }

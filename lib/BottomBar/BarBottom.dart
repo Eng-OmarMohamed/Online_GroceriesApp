@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import '../core/AppColor.dart';
 
 class BarBottom extends StatefulWidget {
-  const BarBottom({super.key});
+  final Function(int) onTap;
+  const BarBottom({super.key, required this.onTap});
 
   @override
   State<BarBottom> createState() => _BarBottomState();
@@ -14,14 +15,15 @@ class _BarBottomState extends State<BarBottom> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
 
-      backgroundColor: Colors.white70,
-      selectedItemColor: Colors.greenAccent,
-      unselectedItemColor: Colors.black54,
+      backgroundColor: AppColor.bg,
+      selectedItemColor: AppColor.selected,
+      unselectedItemColor: AppColor.unselected,
       type: BottomNavigationBarType.fixed,
       currentIndex: selectedBottomIndex,
       onTap: (index) {
         setState(() {
           selectedBottomIndex = index;
+          widget.onTap(index);
         });
       },
       items: [

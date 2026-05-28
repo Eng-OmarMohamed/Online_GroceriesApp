@@ -18,4 +18,10 @@ class AppColor{
   // Button
   static Color button_OnBording_Page = Color(0xFF4BC578) ;
 
+  // BottomBar
+  static Color bg = Colors.white70 ;
+  static Color selected = Colors.greenAccent ;
+  static Color unselected = Colors.black54 ;
+
+
 }
