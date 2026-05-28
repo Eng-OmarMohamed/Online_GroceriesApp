@@ -63,15 +63,15 @@ The design is inspired by the famous *Nectar Grocery App* with some custom impro
 
 ## Screenshots
 
-![Home Screen](assets/images/Screen1.png)
+<p align="center">
+  <img src="assets/images/Screen1.png" width="180"/>
+  <img src="assets/images/Screen2.png" width="180"/>
+  <img src="assets/images/Screen3.png" width="180"/>
+  <img src="assets/images/Screen4.png" width="180"/>
+  <img src="assets/images/Screen5.png" width="180"/>
+</p>
 
-![Login Screen](assets/images/Screen2.png)
-
-![Home Screen]("assets/images/Screen3.png)
-
-![Login Screen]("assets/images/Screen4.png)
-
-![Login Screen]("assets/images/Screen5.png)
+---
 
 # 👨‍💻 Developer
 
