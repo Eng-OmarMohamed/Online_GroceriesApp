@@ -1,17 +1,67 @@
-# online_groceries_app
+# 🍏 Nectar Grocery App - Flutter Project
 
-A new Flutter project.
+A modern Flutter UI inspired by the famous Nectar Grocery application.
+This project was built to practice Flutter UI development, clean code architecture, and responsive design.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+# 📱 App Features
 
-A few resources to get you started if this is your first Flutter project:
+The application includes:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* Splash Screen
+* Welcome Screen
+* Login & Sign Up Screens
+* Bottom Navigation Bar
+* Modern and clean UI
+* Responsive Design for different screen sizes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+# 🚀 Features
+
+✅ Modern UI Design using Flutter
+✅ Clean Code Architecture
+✅ Reusable Widgets
+✅ Bottom Navigation Bar for smooth navigation
+✅ TextField Validation
+✅ Responsive Design for all devices
+✅ Organized project structure
+✅ Smooth and simple User Experience
+✅ Separation of Widgets, Constants, and Screens
+✅ Beginner & Intermediate friendly project
+
+---
+
+# 🛠️ Technologies Used
+
+* Flutter
+* Dart
+* Material Design
+
+---
+
+# 🎯 What I Learned
+
+Through this project, I practiced:
+
+* Building UI with Flutter
+* Organizing Flutter projects
+* Creating reusable widgets
+* Implementing Validation
+* Using Bottom Navigation Bar
+* Improving UI/UX
+* Navigation between screens
+
+---
+
+# 📸 Design Inspiration
+
+The design is inspired by the famous *Nectar Grocery App* with some custom improvements and modifications.
+
+---
+
+# 👨‍💻 Developer
+
+*EngOmar*
+Developed With Flutter♥️
